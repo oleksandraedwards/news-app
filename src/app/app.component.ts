@@ -11,8 +11,8 @@ const themes = {
         primary: '#ba555a',
         secondary: '#FCFF6C',
         tertiary: '#FE5F55',
-        medium: '#e7e7e7',
-        dark: '#F7F7FF',
+        medium: '#ffffff',
+        dark: '#f7f7ff',
         light: '#474a4f'
     },
     light: {
