@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-nav>
+            <ion-back-button class="left">
+            </ion-back-button>
+        </ion-nav>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-img [src]="article?.urlToImage"></ion-img>
+    <ion-card>
+        <ion-card-content>
+            <ion-card-title>{{article?.title}}</ion-card-title>
+
+            <hr>
+
+            <ion-text>
+                <ion-label class="label author" *ngIf="article.author">
+                    By: {{article?.author}}</ion-label>
+                <ion-label class="label" *ngIf="article.source">
+                    Source: {{article?.source.name}}</ion-label>
+            </ion-text>
+
+            <hr>
+
+            <ion-text>{{article?.content || article?.description}}</ion-text>
+
+        </ion-card-content>
+
+        <ion-item detail="false" href="{{article?.url}}">
+            <ion-label>
+                Read more...
+            </ion-label>
+        </ion-item>
+    </ion-card>
+
+</ion-content>
+
+
+
+

@@ -12,7 +12,7 @@ const themes = {
         secondary: '#FCFF6C',
         tertiary: '#FE5F55',
         medium: '#ffffff',
-        dark: '#f7f7ff',
+        dark: '#F7F7FF',
         light: '#474a4f'
     },
     light: {
