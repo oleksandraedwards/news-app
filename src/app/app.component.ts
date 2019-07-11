@@ -3,6 +3,27 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import {ThemeService} from './theme.service';
+
+
+const themes = {
+    dark: {
+        primary: '#ba555a',
+        secondary: '#FCFF6C',
+        tertiary: '#FE5F55',
+        medium: '#e7e7e7',
+        dark: '#F7F7FF',
+        light: '#474a4f'
+    },
+    light: {
+        primary: '#39BFBD',
+        secondary: '#4CE0B3',
+        tertiary: '#FF5E79',
+        light: '#ffffff',
+        medium: '#B682A5',
+        dark: '#34162A'
+    }
+};
 
 @Component({
   selector: 'app-root',
@@ -25,12 +46,17 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private themeService: ThemeService
   ) {
     this.initializeApp();
   }
 
-  initializeApp() {
+    changeTheme(name) {
+        this.themeService.setTheme(themes[name]);
+    }
+
+    initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();

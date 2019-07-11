@@ -4,5 +4,4 @@ export class Article {
     urlToImage: any;
     url: string;
     description: any;
-    publishedAt: any;
 }

@@ -17,6 +17,8 @@ export class HomePage implements OnInit {
   page = 1;
   searchTerm = '';
   key = 'articles';
+  totalResults: number;
+
 
   constructor(private newsService: NewsApiService,
               private router: Router,
@@ -61,8 +63,8 @@ export class HomePage implements OnInit {
                 }`
         )
         .subscribe(data => {
-          console.log(data);
-          this.data = data;
+          // console.log(data);
+          // this.data = data;
           for (const article of data[this.key]) {
             this.data.articles.push(article);
           }
@@ -70,5 +72,4 @@ export class HomePage implements OnInit {
           console.log(this.data);
         });
   }
-
 }

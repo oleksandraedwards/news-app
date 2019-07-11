@@ -14,8 +14,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {HomePageModule} from './home/home.module';
 import {ArticleContentPageModule} from './home/article-content/article-content.module';
 import {AboutPageModule} from './about/about.module';
-import { SocialSharing} from '@ionic-native/social-sharing';
-import { File} from '@ionic-native/file';
+import { IonicStorageModule } from '@ionic/storage';
+
 
 
 @NgModule({
@@ -29,7 +29,8 @@ import { File} from '@ionic-native/file';
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    IonicStorageModule.forRoot()
   ],
   providers: [
     StatusBar,
